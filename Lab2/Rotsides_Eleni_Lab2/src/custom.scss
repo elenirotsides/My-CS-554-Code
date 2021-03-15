@@ -1,0 +1,47 @@
+@import 'variables';
+@import '../src/bootstrap/scss/bootstrap.scss';
+
+nav,
+#Sound,
+#Toy,
+#Life,
+#Dalmatians,
+#Wizard {
+    background-color: $background;
+}
+
+p {
+    &.card-text {
+        color: $rust;
+        text-align: center;
+    }
+    &.pModal {
+        color: $rust;
+    }
+    &.imgCaption {
+        text-align: center;
+        font-family: $my-font;
+        color: black;
+        font-size: 10px;
+    }
+}
+
+span {
+    font-weight: bold;
+}
+
+h4 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+h2,
+h1 {
+    text-align: center;
+    font-family: $my-font;
+}
+
+#movieNav {
+    font-size: 25px;
+    font-family: $my-font;
+}
