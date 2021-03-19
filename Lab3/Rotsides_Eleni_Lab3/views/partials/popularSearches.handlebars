@@ -1,0 +1,11 @@
+<h1>Most Popular Searches!</h1>
+{{#if popular}}
+<ol>
+{{#each popular}}
+<li>{{this}}</li>
+{{/each}}
+</ol>
+{{/if}}
+{{#if empty}}
+<p>There haven't been any searches performed yet!</p>
+{{/if}}

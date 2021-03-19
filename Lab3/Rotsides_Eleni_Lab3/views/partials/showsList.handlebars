@@ -1,0 +1,8 @@
+<h1>List of Shows!</h1>
+<ul>
+    {{#each this}}
+    {{#if id}}
+    <li><a href="/show/{{id}}">{{name}}</a></li> 
+    {{/if}}
+    {{/each}}
+</ul>

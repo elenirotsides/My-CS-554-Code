@@ -1,0 +1,24 @@
+<h1>{{name}}</h1>
+{{#if image.medium}}
+<img src="{{image.medium}}" alt="{{name}} is pictured">
+{{/if}}
+{{#if status}} 
+<p>Status: {{status}}</p>
+{{/if}}
+{{#if rating.average}}
+<p>Rating: {{rating.average}}</p>
+{{/if}}
+{{#if language}}
+<p>Language: {{language}}</p>
+{{/if}}
+{{#if genres}}
+<p>Genres:</p>
+<ul>
+{{#each genres}}
+<li>{{this}}</li>
+{{/each}}
+</ul>
+{{/if}}
+{{#if summary}}
+{{summary}}
+{{/if}}
