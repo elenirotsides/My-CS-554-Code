@@ -1,8 +1,8 @@
 # Web Programming II: CS-554
 
-This is an advanced web programming course that can be taken after the successful completion of [CS-546, Web Programming I](https://github.com/elenirotsides/My-CS-546-Code).
+This is an advanced web programming course that can be taken after the successful completion of [CS-546, Web Programming I](https://github.com/elenirotsides/My-CS-546-Code) at Stevens Institute of Technology.
 
-Below is a description of the course taken straight from the syllabus
+Below is a description of the course taken straight from the syllabus:
 
 ## Course Description
 
