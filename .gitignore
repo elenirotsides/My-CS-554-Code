@@ -2,6 +2,7 @@
 .vscode
 *.zip
 Lab4
+React-Exercise
 
 # dependencies
 node_modules
