@@ -2,6 +2,7 @@
 .vscode
 *.zip
 Lab4
+.env
 
 # dependencies
 node_modules
