@@ -2,30 +2,30 @@ import React from 'react';
 import '../App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Account from './Account';
-import ChangePassword from './ChangePassword';
-import ForgotPassword from './ForgotPassword';
 import Home from './Home';
 import Landing from './Landing';
 import Navigation from './Navigation';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
+import { AuthProvider } from '../firebase/Auth';
+import PrivateRoute from './PrivateRoute';
 
 function App() {
     return (
-        <Router>
-            <div className="App">
-                <header className="App-header">
-                    <Navigation />
-                </header>
-            </div>
-            <Route exact path="/" component={Landing} />
-            <Route path="/home" component={Home} />
-            <Route path="/account" component={Account} />
-            <Route path="/signin" component={SignIn} />
-            <Route path="/signup" component={SignUp} />
-            <Route path="/changepassword" component={ChangePassword} />
-            <Route path="/forgotpassword" component={ForgotPassword} />
-        </Router>
+        <AuthProvider>
+            <Router>
+                <div className="App">
+                    <header className="App-header">
+                        <Navigation />
+                    </header>
+                </div>
+                <Route exact path="/" component={Landing} />
+                <PrivateRoute path="/home" component={Home} />
+                <PrivateRoute path="/account" component={Account} />
+                <Route path="/signin" component={SignIn} />
+                <Route path="/signup" component={SignUp} />
+            </Router>
+        </AuthProvider>
     );
 }
 
