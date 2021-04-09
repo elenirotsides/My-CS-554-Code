@@ -1,8 +1,9 @@
 .DS_Store
 .vscode
 *.zip
-Lab4
 .env
+Lab5
+secrets.json
 
 # dependencies
 node_modules
