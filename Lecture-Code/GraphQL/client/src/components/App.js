@@ -1,8 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
 import React from 'react';
+import './App.css';
 import { ApolloClient, HttpLink, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { NavLink, BrowserRouter as Router, Route } from 'react-router-dom';
+import Home from './Home';
+import Employees from './Employees';
+import Employers from './Employers';
 
 const client = new ApolloClient({
     cache: new InMemoryCache(),
@@ -14,17 +16,27 @@ const client = new ApolloClient({
 function App() {
     return (
         <ApolloProvider client={client}>
-            <div className='App'>
-                <header className='App-header'>
-                    <img src={logo} className='App-logo' alt='logo' />
-                    <p>
-                        Edit <code>src/App.js</code> and save to reload.
-                    </p>
-                    <a className='App-link' href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
-                        Learn React
-                    </a>
-                </header>
-            </div>
+            <Router>
+                <div>
+                    <header className='App-header'>
+                        <h1 className='App-title'>GraphQL with Apollo Client/Server Demo</h1>
+                        <nav>
+                            <NavLink className='navlink' to='/'>
+                                Home
+                            </NavLink>
+                            <NavLink className='navlink' to='/employees'>
+                                Employees
+                            </NavLink>
+                            <NavLink className='navlink' to='/employers'>
+                                Employers
+                            </NavLink>
+                        </nav>
+                    </header>
+                    <Route exact path='/' component={Home} />
+                    <Route exact path='/employees' component={Employees} />
+                    <Route exact path='/employers' component={Employers} />
+                </div>
+            </Router>
         </ApolloProvider>
     );
 }
