@@ -2,8 +2,8 @@ import { v4 as uuid } from 'uuid';
 const initalState = [
     {
         id: uuid(),
-        name: 'Patrick Hill',
-        email: 'phill@stevens.edu',
+        name: 'Eleni Rotsides',
+        email: 'erotside@stevens.edu',
     },
 ];
 

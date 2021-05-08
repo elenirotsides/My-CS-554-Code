@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import AddUser from './AddUser';
 import User from './User';
+
 function Users() {
     const [addBtnToggle, setBtnToggle] = useState(false);
     const allUsers = useSelector((state) => state.users);
