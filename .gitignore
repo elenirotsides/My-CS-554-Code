@@ -2,7 +2,6 @@
 .vscode
 *.zip
 .env
-Lab5
 secrets.json
 
 # dependencies
